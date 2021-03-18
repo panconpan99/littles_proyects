@@ -1,5 +1,6 @@
 import random
-
+#rock papers scissors
+#commonly known as cachipun in chile
 lista=['piedra','papel','tijera']
 def winner(n, jugador, computador):
     if n == 1:
