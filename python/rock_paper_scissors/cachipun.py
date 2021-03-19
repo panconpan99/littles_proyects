@@ -3,7 +3,7 @@ import random
 #commonly known as cachipun in chile
 lista=['piedra','papel','tijera']
 def winner(n, jugador, computador):
-    if n == 1:
+    if n:
         print('el jugador gano')
         jugador+=1
     else:
@@ -25,19 +25,19 @@ while run:
         print('empate')
     elif elegir_jugador== 'piedra':
         if elegir_computador == 'tijera':
-            j,c = winner(1,j,c)
+            j,c = winner(True,j,c)
         else:
-            j,c = winner(0,j,c)
+            j,c = winner(False,j,c)
     elif elegir_jugador == 'tijera':
         if elegir_computador == 'papel':
-            j,c= winner(1,j,c)
+            j,c= winner(True,j,c)
         else:
-            j,c = winner(0,j,c)
+            j,c = winner(False,j,c)
     elif elegir_jugador == 'papel':
         if elegir_computador == 'piedra':
-            j,c=winner(1,j,c)
+            j,c=winner(True,j,c)
         else:
-            j,c=winner(0,j,c)
+            j,c=winner(False,j,c)
     else:
         print("comando erroneo")
 
